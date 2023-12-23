@@ -1,14 +1,22 @@
 # GeoPlus
 
-GeoPlus is a location tracking application that allows users to track each other on a map using WebSocket communication. This application showcases the use of Spring WebSocket on the backend and plain HTML, CSS, and JavaScript on the frontend.
+GeoPlus is a location tracking application that allows users to track each other on a map using WebSocket communication.
+This application showcases the use of Spring WebSocket on the backend and plain HTML, CSS, and JavaScript on the
+frontend.
 
 ## Table of Contents
 
 - [Features](#features)
 - [Setup](#setup)
-- [Backend Code](#backend-code)
-- [Frontend Code](#frontend-code)
-- [License](#license)
+- [Components](#Components)
+    - [Backend](#Backend)
+        - [WebSocket Configuration](#WebSocketConfiguration)
+        - [Location Controller](#LocationController)
+        - [Location Entity](#LocationEntity)
+    - [Frontend](#Frontend)
+        - [HTML](#HTML)
+        - [JavaScript](#JavaScript)
+        - [CSS](#CSS)
 
 ## Features
 
@@ -31,28 +39,39 @@ Run the WebSocketConfig and LocationController classes.
 The WebSocket server will be accessible at http://localhost:8080/ws.
 
 3. **Run the Frontend:**
-  
-- Open index.html in a web browser. 
-- Enter your ID and the ID of the person you want to track. 
+
+- Open index.html in a web browser.
+- Enter your ID and the ID of the person you want to track.
 - Enjoy real-time location updates on the map!
 
 ### Components
-#### Backend Code
-##### WebSocket Configuration
+
+#### Backend
+
+##### WebSocketConfiguration
+
 Configures Spring WebSocket, specifying message prefixes and STOMP endpoints for WebSocket communication.
 
-##### Location Controller
-Handles WebSocket messages related to location updates. Receives location data, logs it, and broadcasts it to the intended recipient.
+##### LocationController
 
-##### Location Entity
+Handles WebSocket messages related to location updates. Receives location data, logs it, and broadcasts it to the
+intended recipient.
+
+##### LocationEntity
+
 A Java class representing the structure of a location, including sender, recipient, latitude, and longitude.
 
-#### Frontend Code
+#### Frontend
+
 ##### HTML
+
 Defines the structure of the application, includes references to external libraries (Leaflet, SockJS, Stomp).
 
 ##### JavaScript
-Manages WebSocket connections, initializes the map, handles real-time location updates, and sends the user's current location periodically.
+
+Manages WebSocket connections, initializes the map, handles real-time location updates, and sends the user's current
+location periodically.
 
 ##### CSS
+
 Applies styles to HTML elements, ensuring a visually appealing and responsive user interface.
